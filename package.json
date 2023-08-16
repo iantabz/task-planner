@@ -25,7 +25,7 @@
     "postcss-html": "^1.5.0",
     "sass": "^1.56.2",
     "sass-loader": "10",
-    "stylelint": "^14.16.0",
+    "stylelint": "15.3.0",
     "stylelint-config-prettier": "^9.0.4",
     "stylelint-config-recommended-vue": "^1.4.0",
     "stylelint-config-standard": "^29.0.0",
@@ -37,9 +37,15 @@
     "vuedraggable": "^2.24.3"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.21.3",
     "@nuxt/eslint-config": "^0.1.1",
+    "@nuxtjs/eslint-config": "^12.0.0",
     "@nuxtjs/fontawesome": "^1.1.2",
     "@nuxtjs/stylelint-module": "^4.1.0",
-    "eslint": "^8.30.0"
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-cypress": "^2.13.2",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-prettier": "^4.2.1"
   }
 }
