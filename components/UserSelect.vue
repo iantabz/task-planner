@@ -1,18 +1,18 @@
 <template>
-  <div ref="dropdown" class="dropdown" tabindex="0" v-show="showDropdown" :style="{
+  <div ref="dropdown" class="custom-dropdown" tabindex="0" v-show="showDropdown" :style="{
     left: mouseCoordinates.clientX + 'px',
     top: mouseCoordinates.clientY + 'px',
   }">
-    <div class="dropdown__header position-relative">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="dropdown__header__icon">
+    <div class="custom-dropdown__header position-relative">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="custom-dropdown__header__icon">
         <path
           d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
       </svg>
-      <input ref="userSearch" :value="serverQuery.search" type="text" class="dropdown__header__input"
+      <input ref="userSearch" :value="serverQuery.search" type="text" class="custom-dropdown__header__input"
         placeholder="Search Team Member" @blur="inputIsFocused = false" @focus="inputIsFocused = true" @keyup="search" />
     </div>
 
-    <div class="dropdown__content">
+    <div class="custom-dropdown__content">
       <ul>
         <li v-for="user in usersArranged" :key="user.id" class="assignee-option" :class="{
           'assignee-option--active': currentAssigneeId == user.id,
