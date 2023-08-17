@@ -421,7 +421,7 @@
 
 
 
-                                            <div class="mt-2 text-center">
+                                            <div class="mt-2 text-center zoomable">
                                                 <b-card-title class="inline-block"
                                                     style="font-size: 14px; color:#3aa678">Well
                                                     done,
