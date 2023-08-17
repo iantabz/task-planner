@@ -53,51 +53,64 @@
         <b-container fluid>
             <b-row class="flow-xl">
                 <b-list-group class="bd-sidebar border-bottom-0 col-md-3 col-xl-2 col-12 border-transparent">
-                    <b-list-group-item v-b-toggle.collapse-1 class="d-flex align-items-center border-transparent"
+                    <b-list-group-item v-b-toggle.collapse-1 class="d-flex align-items-center border-transparent zoomable"
                         @click='toggleCollapse' :class="{ 'blue-purple-color': isCollapsed }" href="javascript:void(0)">
-                        <BIconPersonFill class="mr-2" :class="{ 'blue-purple-color': isCollapsed }"></BIconPersonFill>
+                        <BIconPerson class="mr-2 icon" :class="{ 'blue-purple-color': isCollapsed }"></BIconPerson>
                         <small class="mr-auto" :class="{ 'blue-purple-color': isCollapsed }">Profile</small>
                         <BIconChevronRight class="pull-right" v-if='!isCollapsed' />
                         <BIconChevronDown v-else :class="{ 'blue-purple-color': isCollapsed }" class="pull-right" />
                     </b-list-group-item>
                     <b-collapse id="collapse-1">
-                        <b-list-group-item class="border-transparent" href="javascript:void(0)">
-                            <BIconFileEarmarkText class="mr-2"></BIconFileEarmarkText>
+                        <b-list-group-item class="border-transparent zoomable" href="javascript:void(0)">
+                            <BIconFileEarmarkText class="mr-2 icon"></BIconFileEarmarkText>
                             <small class='mr-auto'>
                                 Resume / CV
                             </small>
                         </b-list-group-item>
-                        <b-list-group-item class="border-transparent" href="javascript:void(0)"><small>
-                                <BIconFileBarGraph class="mr-2"></BIconFileBarGraph>Assessment
+                        <b-list-group-item class="border-transparent zoomable" href="javascript:void(0)"><small>
+                                <BIconFileBarGraph class="mr-2 icon"></BIconFileBarGraph>Assessment
                             </small></b-list-group-item>
-                        <b-list-group-item class="" :class="isCollapsed ? 'underlined-border' : 'border-transparent'"
+                        <b-list-group-item class="zoomable"
+                            :class="isCollapsed ? 'underlined-border' : 'border-transparent'"
                             href="javascript:void(0)"><small>
-                                <BIconCollectionPlay class="mr-2"></BIconCollectionPlay>Video Script
+                                <BIconCollectionPlay class="mr-2 icon"></BIconCollectionPlay>Video Script
                             </small></b-list-group-item>
                     </b-collapse>
-                    <b-list-group-item class="d-flex align-items-center border-transparent" href="javascript:void(0)">
-                        <BIconBriefcase class="mr-2"></BIconBriefcase>
+                    <b-list-group-item class="d-flex align-items-center border-transparent zoomable"
+                        href="javascript:void(0)">
+                        <BIconBriefcase class="mr-2 icon"></BIconBriefcase>
                         <small>Application Training</small>
                     </b-list-group-item>
-                    <b-list-group-item class="d-flex align-items-center border-transparent" href="javascript:void(0)">
-                        <BIconBookmark class="mr-2"></BIconBookmark>
+                    <b-list-group-item class="d-flex align-items-center border-transparent zoomable"
+                        href="javascript:void(0)">
+                        <BIconBookmark class="mr-2 icon"></BIconBookmark>
                         <small>Bookmarked</small>
                     </b-list-group-item>
-                    <b-list-group-item class="d-flex align-items-center border-transparent" href="javascript:void(0)">
-                        <BIconBell class="mr-2"></BIconBell>
+                    <b-list-group-item class="d-flex align-items-center border-transparent zoomable"
+                        href="javascript:void(0)">
+                        <BIconBell class="mr-2 icon"></BIconBell>
                         <small class="mr-2">Notifcations</small>
                         <b-badge variant="danger" pill>2</b-badge>
                     </b-list-group-item>
-                    <b-list-group-item class="d-flex align-items-center border-transparent" href="javascript:void(0)">
-                        <BIconDiagram3 class="mr-2"></BIconDiagram3>
-                        <small>Activity Logs</small>
+                    <b-list-group-item class="d-flex align-items-center border-transparent zoomable"
+                        href="javascript:void(0)">
+                        <!-- <BIconDiagram3 class="mr-2"></BIconDiagram3> -->
+                        <div class="align-items-center mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-activity icon" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z" />
+                            </svg>
+                            <small>Activity Logs</small>
+                        </div>
                     </b-list-group-item>
-                    <b-list-group-item class="d-flex align-items-center border-transparent" href="javascript:void(0)">
-                        <BIconGear class="mr-2"></BIconGear>
+                    <b-list-group-item class="d-flex align-items-center border-transparent zoomable"
+                        href="javascript:void(0)">
+                        <BIconGear class="mr-2 icon"></BIconGear>
                         <small>Settings</small>
                     </b-list-group-item>
 
-                    <small style="font-size: 10px;">Copyright 2018 - 2023. All Rights Reserverd.</small>
+                    <small class="mt-3" style="font-size: 10px;">Copyright 2018 - 2023. All Rights Reserverd.</small>
 
                     <small style="font-size: 10px; color: #6a75fd"> Terms of Use ∘ Privacy Policy</small>
                 </b-list-group>
@@ -130,8 +143,8 @@
                             <b-card class="shadow mb-4">
                                 <b-row>
                                     <b-col>
-                                        <div class="d-flex align-items-center">
-                                            <b-avatar variant="light" class="mr-3" size="md"></b-avatar>
+                                        <div class="d-flex align-items-center zoomable">
+                                            <b-avatar variant="light" class="mr-3 icon" size="md"></b-avatar>
                                             <div>
                                                 <small class="mb-1" style="font-size: 12px;">Applicant Profile</small>
                                                 <b-progress :value="progress.applicant_profile"
@@ -144,8 +157,8 @@
                                     </b-col>
 
                                     <b-col>
-                                        <div class="d-flex align-items-center">
-                                            <b-avatar icon="b-icon-file-earmark-text" class="mr-3" variant='light'
+                                        <div class="d-flex align-items-center zoomable">
+                                            <b-avatar icon="b-icon-file-earmark-text" class="mr-3 icon" variant='light'
                                                 font-scale="4"></b-avatar>
                                             <div>
                                                 <small class="mb-1" style="font-size: 12px;"> Resume / CV</small>
@@ -160,8 +173,8 @@
 
 
                                     <b-col>
-                                        <div class="d-flex align-items-center">
-                                            <b-avatar icon="b-icon-file-bar-graph" class="mr-3" variant='light'
+                                        <div class="d-flex align-items-center zoomable">
+                                            <b-avatar icon="b-icon-file-bar-graph" class="mr-3 icon" variant='light'
                                                 font-scale="4"></b-avatar>
                                             <div>
                                                 <small class="mb-1" style="font-size: 12px;"> Assessment Score</small>
@@ -174,8 +187,8 @@
                                         </div>
                                     </b-col>
                                     <b-col>
-                                        <div class="d-flex align-items-center">
-                                            <b-avatar icon="b-icon-file-bar-graph" class="mr-3" variant='light'
+                                        <div class="d-flex align-items-center zoomable">
+                                            <b-avatar icon="b-icon-file-bar-graph" class="mr-3 icon" variant='light'
                                                 font-scale="4"></b-avatar>
                                             <div>
                                                 <small class="mb-1" style="font-size: 12px;"> Video Introduction</small>
@@ -372,7 +385,11 @@
     </b-container>
 </template>
 <script>
-import { BIconPersonFill, BIconFileEarmarkText, BIconFileBarGraph, BIconCollectionPlay, BIconBriefcase, BIconBookmark, BIconBell, BIconDiagram3, BIconGear, BIconChevronRight, BIconChevronDown } from 'bootstrap-vue'
+import {
+    BIconPerson, BIconFileEarmarkText, BIconFileBarGraph, BIconCollectionPlay, BIconBriefcase, BIconBookmark, BIconBell,
+    // BIconDiagram3,
+    BIconGear, BIconChevronRight, BIconChevronDown
+} from 'bootstrap-vue'
 
 export default {
     data() {
@@ -387,7 +404,9 @@ export default {
         };
     },
     components: {
-        BIconPersonFill, BIconFileEarmarkText, BIconFileBarGraph, BIconCollectionPlay, BIconBriefcase, BIconBookmark, BIconBell, BIconDiagram3, BIconGear, BIconChevronRight, BIconChevronDown
+        BIconPerson, BIconFileEarmarkText, BIconFileBarGraph, BIconCollectionPlay, BIconBriefcase, BIconBookmark, BIconBell,
+        // BIconDiagram3,
+        BIconGear, BIconChevronRight, BIconChevronDown
     },
     methods: {
         toggleCollapse() {
@@ -418,5 +437,13 @@ export default {
 
 .resume_progress .progress-bar {
     background-color: red;
+}
+
+.icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+.zoomable:hover .icon {
+    transform: scale(1.5);
 }
 </style>
