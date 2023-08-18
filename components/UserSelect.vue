@@ -71,6 +71,11 @@ export default {
         (user) => user.id === this.currentAssigneeId
       );
 
+      if (index === -1) {
+        // Handle the case where the currentAssigneeId is not found in users
+        return this.users;
+      }
+
       const find = this.users.find(
         (user) => user.id === this.currentAssigneeId
       );
@@ -81,6 +86,7 @@ export default {
       userList.unshift(find);
       return userList;
     },
+
   },
   watch: {
     showDropdown(val) {
